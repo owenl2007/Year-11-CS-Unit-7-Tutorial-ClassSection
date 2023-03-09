@@ -129,10 +129,14 @@ public class ClassSectionTester {
     @Test
     // Test 12
     public void TestForClassSectionYearLevel() {
+
         setUp();
+
         assertEquals("Make sure that the year level is initialized correctly!", cs.getYearLevel(), 12);
         tearDown();
     }
+
+
 
     @Test
     // Test 13
@@ -141,6 +145,8 @@ public class ClassSectionTester {
         assertEquals("Make sure that the capacity is initialized correctly!", cs.getCapacity(), 10);
         tearDown();
     }
+
+
 
     @Test
     // Test 14
@@ -168,6 +174,9 @@ public class ClassSectionTester {
         tearDown();
     }
 
+
+
+
     @Test
     // Test 17
     public void TestForClassSectionSetYearLevel() {
@@ -184,6 +193,8 @@ public class ClassSectionTester {
         cs.addStudent(student1);
         assertEquals("Make sure that the add student method adds a student to the class section!", cs.getStudents().size(), 1);
         tearDown();
+
+
     }
 
     @Test
@@ -205,6 +216,7 @@ public class ClassSectionTester {
         cs.addStudent(student4);
         assertEquals("Make sure that the add student method adds a student to the class section!", cs.getStudents().size(), 2);
         tearDown();
+
     }
 
     @Test
@@ -216,6 +228,7 @@ public class ClassSectionTester {
         cs.removeStudent(student1);
         assertEquals("Make sure that the remove student method removes that student from the class section!", cs.getStudents().contains(student1), false);
         tearDown();
+
     }
 
     @Test
@@ -230,6 +243,7 @@ public class ClassSectionTester {
         cs.removeStudent(student4);
         assertEquals("Make sure that the add student and remove student methods work correctly!", cs.getStudents().size(), 0);
         tearDown();
+
     }
 
     @Test
@@ -240,6 +254,7 @@ public class ClassSectionTester {
         cs.addStudent(student1);
         assertEquals("Make sure that no two identical Student objects can be added to a class section!", cs.getStudents().size(), 1);
         tearDown();
+
     }
 
     @Test
@@ -251,6 +266,7 @@ public class ClassSectionTester {
         cs.addStudent(student2);
         assertEquals("Make sure that students with conflicting ids cannot be added to a class section!", cs.getStudents().contains(student2), false);
         tearDown();
+
     }
 
 }
